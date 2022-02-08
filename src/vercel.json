@@ -1,12 +1,6 @@
 {
     "name": "road2fit",
     "version": 2,
-    "builds": [
-        {
-            "src": "*.js",
-            "use": "@now/node-server"
-        }
-    ],
     "routes": [
         {
             "src": "/auth/(.*)",
