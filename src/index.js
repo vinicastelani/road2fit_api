@@ -19,7 +19,7 @@ app.use(cors())
 require('./controllers/AuthController')(app)
 
 app.get("/", (req, res) => {
-    res.status(400).send({ msg: "OK" })
+    res.status(400).send({ msg: "API disponível" })
 })
 
 app.listen(process.env.PORT || 4000, () =>
