@@ -11,6 +11,15 @@
         {
             "src": "/auth/(.*)",
             "dest": "/index.js"       
-        }     
-    ]
+        },
+        {
+            "src": "/(.*)", 
+            "dest": "/index.js"       
+        }
+    ],
+     "env": {
+        "MONGODB_URI": "@server-uri",
+        "DB_USERNAME": "vinicastelani",
+        "DB_PASSWORD": "vini110297"
+    }
 }
