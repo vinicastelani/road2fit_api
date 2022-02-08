@@ -1,5 +1,4 @@
 {
-    "name": "road2fit",
     "version": 2,
     "builds": [
         {
@@ -10,16 +9,11 @@
     "routes": [
         {
             "src": "/auth/(.*)",
-            "dest": "/index.js"       
+            "dest": "/"       
         },
         {
             "src": "/(.*)", 
-            "dest": "/index.js"       
+            "dest": "/"       
         }
-    ],
-     "env": {
-        "MONGODB_URI": "@server-uri",
-        "DB_USERNAME": "vinicastelani",
-        "DB_PASSWORD": "vini110297"
-    }
+    ]
 }
