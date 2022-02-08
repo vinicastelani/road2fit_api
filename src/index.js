@@ -6,7 +6,6 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const app = express();
-app.use(cors())
 app.use(bodyParser.json());
 app.use(
     bodyParser.urlencoded({
@@ -15,6 +14,7 @@ app.use(
         parameterLimit: 50000,
     })
 );
+app.use(cors())
 
 require('./controllers/AuthController')(app)
 
