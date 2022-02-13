@@ -34,9 +34,7 @@ router.post("/authentication", async (req, res) => {
     if (!await bcrypt.compare(password, user.password)) return res.status(400).send({ success: false, msg: "Senha inválida." })
 
     user.password = undefined
-    const token = jwt.sign({ id: id }, authConfig.secret, {
-        expiresIn: 3600
-    })
+
 
     res.send({ success: true, user, token: gerarToken(id, authConfig.secret), msg: "Logado com sucesso!" })
 })

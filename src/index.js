@@ -17,6 +17,7 @@ app.use(
 app.use(cors())
 
 require('./controllers/AuthController')(app)
+require('./controllers/UsersController')(app)
 
 app.get("/", (req, res) => {
     res.status(400).send({ msg: "API disponível" })
