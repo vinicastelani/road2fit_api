@@ -16,11 +16,11 @@ router.get("/:string", async (req, res) => {
             .status(200)
             .send({
                 msg: {
-                    type: "success", msg: "Usuários encontrados com base na busca", data: users.filter(user => {
-                        return formatName(user.name).includes(formatName(req.params.string))
-                    }),
-
-                }
+                    type: "success", msg: "Usuários encontrados com base na busca",
+                },
+                data: users.filter(user => {
+                    return formatName(user.name).includes(formatName(req.params.string))
+                })
             });
     } catch (err) {
 
